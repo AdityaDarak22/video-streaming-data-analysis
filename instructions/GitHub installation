@@ -6,8 +6,7 @@ GitHub installation Manual
 4.	After Git is installed, open Git bash on local machine and configure your git hub account. E.g.
 		git config --global user.name "Roopesh-g"
 		git config --global user.email gujarathi.roopesh@gmail.com
-5. Clone the Git hub repository using tye below command
-		git clone <URL> (copied in step 2)
-
+5. 	Clone the Git hub repository using tye below command
+		git clone <URL> (copied in step 2). First time it will ask for credentials
 		
 	
