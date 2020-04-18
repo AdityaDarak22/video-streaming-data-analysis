@@ -1,0 +1,13 @@
+GitHub installation Manual
+
+1.	Download & install Git from www.git-scm.com/downloads
+2.	Go to git hub account & copy the repository link to clone it on local machine.
+3.	Create a folder in local where you will keep all the repositories from git
+4.	After Git is installed, open Git bash on local machine and configure your git hub account. E.g.
+		git config --global user.name "Roopesh-g"
+		git config --global user.email gujarathi.roopesh@gmail.com
+5. Clone the Git hub repository using tye below command
+		git clone <URL> (copied in step 2)
+
+		
+	
