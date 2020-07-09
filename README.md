@@ -1,2 +1,4 @@
-# Video Streaming Data Mining
-This repository will be used to maintain catalog of mining-youtube-data project.
+# Video Streaming Analysis
+This repository will be used to maintain catalog of data mining on various video streaming services.
+
+Project Abstract: All kinds of streaming services are becoming more popular day-by-day. Given that one such video streaming service YouTube alone generates 300 hours of video every minute. Also, five billion videos are viewed in single day. This service has user base of more than 163 million across the globe. This numbers are already gigantic and growing with each passing day. Other video streaming services (especially video streaming) like Netflix, Amazon Prime Videos, HULU, etc. are following the giant (YouTube) in the race of data consumption and user-base. This kind of growth is only possible by utilizing the technology, which is a topic for another day, and meticulously placing marketing strategies to attract the consumers in need. The purpose of this study is to understand the user engagement on different platforms. Also, to gain some insight on what kind of video content is popular. The information then can be used by the content creators.
