@@ -1,4 +1,22 @@
-1. identified a domain for the data analysis
-2. R&D on the domain. And search for datasets on web
-3. created a repository on GitHub
-4. Github instalation and created instruction manual doc
+Task 1: General task
+GitHub repository was created to collaborate the individual work.
+System Architecture was created.
+
+Task 2: Fetching YouTube data using its API
+Popular videos metadata was fetched using the API. To use the API, one has to register on Google Developer Console to get the API access key. Key is required parameter that has to be passed along the request. In similar manner, video categories data was fetched.
+Challenge: YouTube API has imposed a limitation on the total number of records being fetched. In case of “popular videos”, 200 was the limit. Also, at a time maximum 50 records can be fetched. Challenge was to find a feasible approach to get at least 1000 records.
+Solution: After rigorous R&D, it was identified that the API accepts few more useful parameters to filter the response. One use was the use of “region”, when “region” is passed along with the API request we get 200 popular videos data of that region which sums up to 1000 records. So, 5 regions were used US (United States), CA (Canada), IN (India), UK (United Kingdom), AUS (Australia). Lastly, to “token” (pagination) parameter was used to loop over the data fetched by 1 region.
+
+Task 3: Inserting data into MongoDB
+Here, task was to insert unstructured data (JSON) in to MongoDB. Programmatically 1 database and 10 collection were created to hold the data.
+2 for each region (5 in total) to store video metadata and video categories data.
+Idea: Instead of using MongoDB on local machine, we thought of using MongoDB Atlas which is cloud instance. This instance was free to use with limitation of storage space up to 512 MB (Megabyte). We
+could couldn’t connect to this instance with ipython. Also, we faced some high latency rate with this instance.
+
+Task 4: Inserting records from MongoDB to PostgreSQL
+In this, aim was to covert the JSON records, fetched from MongoDB, to data frame than to insert into PostgreSQL.
+Challenge: The records that were fetched were having nested json objects. So, nested JSON object was to be flattened before creating the data frame.
+Solution: Each JSON object was iterated to check if the child elements had any nested JSON object otherwise separating key and values. If found, that object was iterated again until no new JSON object identified otherwise separating key and values. Keys (acts as columns) and values (acts as row) were appended into different set of lists. Later, this two lists object were used to create data frame.
+
+Task 5: Querying PostgreSQL for the visualization
+Here, records were fetched for the data cleaning and preprocessing. In preprocessing, NULL values were imputed using median.
